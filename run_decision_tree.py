@@ -33,5 +33,4 @@ feature_zip=zip(feature_list, feature_importances_raw)
 feature_importances = [(feature, round(importance, 4)) for feature, importance in feature_zip]
 feature_importances =sorted(feature_importances, key=lambda x: x[1])
 print(feature_importances)	
-[print('{:14}: {}'.format(*feature_importances))]
-
+[ print('{:14}: {}'.format(*feature_importance)) for feature_importance in feature_importances]
